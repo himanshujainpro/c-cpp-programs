@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Binary Search Iterative method using while loop!
+
+bool findElementInArray(int arr[],int low, int high, int key){
+
+    if(low>high) return false;
+    int mid;
+
+    while(low<=high){
+        mid=(low+high)/2;
+        if(low==high && arr[mid]!=key) return false;
+        if(arr[mid]==key) return true;
+        if(arr[mid]>key) high=mid;
+        else low=mid+1;
+    }
+}
+
+int main() {
+    int arr[]={1,2,3,4,5,6,7,8,9};
+    int n=sizeof(arr)/sizeof(int);
+
+    if(findElementInArray(arr,0,8,10))
+        cout<<"Yes";
+    else
+        cout<<"No";
+}
