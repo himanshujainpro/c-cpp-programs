@@ -7,7 +7,8 @@ using namespace std;
 int main(){
     int a[10]={9,8,7,6,5,4,3,2,1,10};
     int i;
-
+    sort(a,a+10);
+    
     // starting and ending address of the array, and element to be searched!
     if(binary_search(a,a+10,10)) cout<<"Yes Present";
     else cout<<"Not present";
