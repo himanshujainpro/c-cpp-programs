@@ -3,8 +3,7 @@
 
 using namespace std;
 
-// demo of searching in the array using inbuilt c++ library!
-// using binary_search method
+
 int main(){
     stack<int> s;
     s.push(10);
